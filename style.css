@@ -1,0 +1,513 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Nabla&family=Pixelify+Sans:wght@400..700&family=Silkscreen:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Manrope", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(23, 26, 33);
+    background: linear-gradient(0deg, rgba(23, 26, 33, 1) 0%, rgba(27, 40, 56, 1) 60%);
+    color: white;
+}
+
+
+h4 {
+    font-family: 'SilkScreen';
+    font-size: 2rem;
+}
+
+/* UTILITIES  AND MEDIA QUERIES*/
+
+.underline {
+    /* text-decoration: underline; */
+    border-bottom: 3px dotted white;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.container {
+    max-width: 1536px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border: 1px solid red;
+}
+
+/* 2xl */
+@media (max-width: 1536px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+/* xl */
+@media (max-width: 1280px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+
+/* lg */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+/* md */
+@media (max-width: 768px) {
+    .container {
+        max-width: 640px;
+    }
+}
+
+/* sm */
+@media (max-width: 640px) {
+    .container {
+        max-width: 475px;
+    }
+}
+
+/* xs */
+@media (max-width: 475px) {
+    .container {
+        width: 100%;
+    }
+}
+
+
+/* NAV */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 50px;
+}
+
+.logo, .title {
+    display: inline;
+}
+
+.nav-left {
+    display: flex;
+    justify-content: center;
+    gap: 10px
+}
+
+.title {
+    font-family: "nabla";
+    font-size: 3rem;
+}
+
+nav ul,
+li {
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    margin-right: 30px;
+}
+
+nav a {
+    font-family: "Silkscreen", serif;
+    padding-bottom: .5rem;
+    font-size: 1.3rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav ul,
+a:link {
+    color: white;
+}
+
+.nav ul,
+a:visited {
+    color: white;
+}
+
+.nav ul,
+a:hover {
+    color: white;
+    text-shadow: 0px 0px 5px white;
+}
+
+
+/* FOOTER */
+
+footer {
+    margin-top: 20px;
+    /* background-color: rgba(0, 0, 139, 0.418); */
+    position: sticky;
+    bottom: 0;
+
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 10rem;
+    padding: 2rem 0rem 0rem;
+}
+
+footer a {
+    font-family: "Silkscreen", serif;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-socials {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-between;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    list-style: none;
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+.footer-middle {
+    flex-grow: 1;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.footer-bottom {
+    margin: 4rem 0rem 0rem;
+    padding-bottom: 1rem;
+}
+
+.footer-bottom p {
+    text-align: center;
+    padding: 15px 0px;
+    font-weight: bold;
+}
+.footer-bottom hr {
+    opacity: .5;
+}
+
+/* --------------- MAIN PAGE --------------- */
+
+
+.signin {
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.534);
+    color: black;
+    text-align: right;
+}
+
+.sign-form input {
+    padding: 5px 5px;
+    color: white;
+    background-color: rgba(23, 26, 33, 0.377);
+    
+}
+
+.sign-form button {
+    padding: 5px 15px;
+}
+
+#return-user {
+    color: black
+}
+
+
+/* HERO SECTION */
+
+.hero {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* TOP GAMES */
+
+.top-games {
+    margin-top: 20px;
+    /* border: 1px solid white; */
+}
+
+.top-games-selection {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+
+/* USER AREA */
+
+.top-reviews {
+    width: 75%;
+}
+
+.user-area {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    /* border: 1px solid yellow; */
+}
+
+.user-review {
+    border: 3px solid white;
+    display: flex;
+    margin-bottom: 10px;
+    gap: 10px
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.date {
+    font-size: .9rem;
+    margin-left: 30px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 20px
+}
+
+.user-info p,
+.user-info img {
+    display: inline;
+    border-radius: 10%;
+}
+
+/* LEFT SIDE USER AREA */
+
+.top-users-area {
+    flex-grow: 1;
+}
+
+.top-user {
+    display: flex;
+    gap: 10px;
+}
+
+.tu-left img {
+    border-radius: 10%;
+}
+
+
+/* --------------- GAMES --------------- */
+
+.games {
+    display: flex;
+    gap: 10px
+}
+
+.games-cont {
+    width: 75%;
+
+}
+
+.games-grid {
+    display: grid;
+    width: auto;
+    aspect-ratio: 1/1;
+    grid-template-columns:  20% 20% 20% 20% 20%;
+    grid-template-rows:  1fr 1fr 1fr 1fr 1fr;
+
+}
+
+.item img {
+    width: 100%;
+    
+}
+
+.item img:hover {
+    width: 100%;
+    transform: scale(110%);
+    
+}
+
+/* .fps, .indie, .platformer, .cosy, .action {
+    height: 100%;
+    overflow: hidden
+} */
+
+.fps {
+    grid-area: 1 / 1 / span 3 / span 3;
+    background-color: aqua;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+
+.indie {
+    grid-area: 3 / 4 / 5 / 6;
+    background-color: green;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+
+.platformer {
+    grid-area: 4 / 1 / 4 / 4;
+    background-color: red;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+
+.action {
+    grid-area: 1 / 4 / 3 / 6;
+    background-color: purple;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+
+.cosy {
+    grid-area: 5 / 1 / 6 / 6;
+    background-color: yellow;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+
+.games-hot {
+    flex-grow: 1;
+}
+
+.game-hot-time {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+/* --------------- ACCOUNTS PAGE --------------- */
+
+.s-about {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.about {
+    display: flex;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.about-info p {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+}
+
+.socials {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 5rem;
+}
+
+
+
+
+/* --------------- ACCOUNTS PAGE --------------- */
+
+.account {
+    margin-top: 20px;
+}
+
+.account-landing {
+    display: flex;
+}
+
+.account-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 2.5rem;
+}
+
+.account-name {
+    font-family: "nabla";
+    font-size: 2.5rem;
+}
+
+.account-info p {
+    display: inline;
+    font-family: 'Silkscreen', sans-serif;
+}
+
+.post-area {
+    margin-top: 20px;
+}
+
+.posts textarea {
+    width: 100%;
+    height: 8rem;
+    background-color: rgba(255, 255, 255, 0.068);
+    margin: 10px 0px;
+    border: 1px solid rgba(255, 255, 255, 0.425);
+}
+
+#post-game {
+    float: right;
+}
+
+
+.account-posts{
+    margin-top: 20px;
+}
+
+.posts-container {
+    display: flex;
+    gap: 1em
+}
+
+
+.previous-posts-container {
+    width: 80%;
+}
+
+.game-rating {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 10px;
+}
+
+.material-symbols-outlined {
+    color: yellow;
+    text-shadow: 0px 0px 5px rgba(255, 166, 0, 0.863);
+}
+
+
