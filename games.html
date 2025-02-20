@@ -1,31 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DISKTRAY</title>
-    <script defer src="index.js"></script>
+    <script defer type="module" src="signin.js"></script>
     <script defer src="games.js"></script>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/379812885c.js" crossorigin="anonymous"></script>
 
 </head>
+
 <body>
     <nav class="container">
         <div class="nav-left">
             <a href="index.html">
-            <img class="logo" src="https://placehold.co/50x50" alt="">
-            <h1 class="title">DISKTRAY</h1>
+                <img class="logo" src="./images/logo.png" alt="">
+                <h1 class="title">DISKTRAY</h1>
             </a>
         </div>
         <div class="nav-right">
             <ul>
-                <li><a class="underline" href="games.html">GAMES</a></li>
+                <li><a href="games.html">GAMES</a></li>
                 <li><a href="about.html">ABOUT</a></li>
-                <li><a id="account" href="contact.html">SIGN IN</a></li>
+                <li>
+                    <div class="nav-dropdown"><a id="account" href="contact.html">SIGN IN</a>
+                        <div class="nav-dropdown-content">
+                            <a class="hidden" id="signOut">SignOut</a>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
     </nav>
+    <!-- SIGN IN FORM -->
+    <div id="signinformcont" class="signinformcont hidden container">
+        <section id="signinform" class="signin">
+            <div>
+                <form class="sign-form" id="signForm">
+                    <input class="hidden" type="text" id="username-input" placeholder="Enter Your Username">
+                    <input type="email" id="email-input" placeholder="Enter Email">
+                    <input type="password" name="" id="password-input" placeholder="Enter Password">
+                    <input class="hidden" type="password" name="" id="repeat-password-input"
+                        placeholder="Re-enter Password">
+                    <button id="loginBtn" type="submit">Login</button>
+                    <br>
+                    <a id="return-user" href="">Returning User</a>
+                </form>
+                <p id="login-responce"></p>
+            </div>
+        </section>
+    </div>
+
 
     <section class="games container">
         <div class="games-cont">
@@ -33,19 +60,19 @@
             <div class="games-grid">
 
                 <div class="item fps">
-                    <img src="https://placehold.co/300x300/" alt="">
+                    <img src="./images/fps.jpg" alt="">
                 </div>
-                <div class="item indie">
-                    <img src="https://placehold.co/300x300" alt="">
+                <div class="item rpg">
+                    <img src="./images/rpg.jpg" alt="">
                 </div>
                 <div class="item platformer">
-                    <img src="https://placehold.co/300x300" alt="">
+                    <img src="./images/platformer.jpg" alt="">
                 </div>
-                <div class="item cosy">
-                    <img src="https://placehold.co/300x300" alt="">
+                <div class="item sim">
+                    <img src="./images/sim.jpg" alt="">
                 </div>
-                <div class="item action">
-                    <img src="https://placehold.co/300x300" alt="">
+                <div class="item fighting">
+                    <img src="./images/fighting.jpg" alt="">
                 </div>
             </div>
 
@@ -85,7 +112,7 @@
                 <div class="footer-left">
                     <div class="foooter-logo">
                         <a href="index.html">
-                            <img class="logo" src="https://placehold.co/50x50" alt="">
+                            <img class="logo" src="./images/logo.png" alt="">
                             <h1 class="title">DISKTRAY</h1>
                         </a>
                     </div>
@@ -102,17 +129,18 @@
                         <ul>
                             <a href="">Games</a>
                             <a href="">About</a>
-                            <a href="">Sign In</a>
+                            <a id="nav-user" href="">Sign In</a>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
                 <hr>
-                <p>DISTRAY - JUST SOFTWARE DEVELOPMENT BOOTCAMP PROJECT</p>
+                <p>DISTRAY - JUST IT SOFTWARE DEVELOPMENT BOOTCAMP PROJECT</p>
                 <hr>
             </div>
         </footer>
     </section>
 </body>
+
 </html>

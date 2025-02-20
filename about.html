@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DISKTRAY</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="index.js"></script>
+    <script defer type="module" src="signin.js"></script>
     <script src="https://kit.fontawesome.com/379812885c.js" crossorigin="anonymous"></script>
 </head>
 
@@ -21,11 +21,35 @@
         <div class="nav-right">
             <ul>
                 <li><a href="games.html">GAMES</a></li>
-                <li><a class="underline" href="about.html">ABOUT</a></li>
-                <li><a id="account" href="contact.html">SIGN IN</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li>
+                    <div class="nav-dropdown"><a id="account" href="contact.html">SIGN IN</a>
+                        <div class="nav-dropdown-content">
+                            <a class="hidden" id="signOut">SignOut</a>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
     </nav>
+    <!-- SIGN IN FORM -->
+    <div id="signinformcont" class="signinformcont hidden container">
+        <section id="signinform" class="signin">
+            <div>
+                <form class="sign-form" id="signForm">
+                    <input class="hidden" type="text" id="username-input" placeholder="Enter Your Username">
+                    <input type="email" id="email-input" placeholder="Enter Email">
+                    <input type="password" name="" id="password-input" placeholder="Enter Password">
+                    <input class="hidden" type="password" name="" id="repeat-password-input"
+                        placeholder="Re-enter Password">
+                    <button id="loginBtn" type="submit">Login</button>
+                    <br>
+                    <a id="return-user" href="">Returning User</a>
+                </form>
+                <p id="login-responce"></p>
+            </div>
+        </section>
+    </div>
 
     <!-- MAIN -->
     <section class="s-about container">
@@ -85,14 +109,14 @@
                         <ul>
                             <a href="">Games</a>
                             <a href="">About</a>
-                            <a href="">Sign In</a>
+                            <a id="nav-user" href="">Sign In</a>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
                 <hr>
-                <p>DISTRAY - JUST SOFTWARE DEVELOPMENT BOOTCAMP PROJECT</p>
+                <p>DISTRAY - JUST IT SOFTWARE DEVELOPMENT BOOTCAMP PROJECT</p>
                 <hr>
             </div>
         </footer>

@@ -1,21 +1,22 @@
-const gameURL = 'https://api.igdb.com/v4/games'
+// const cors_api =  'http://localhost:8080/'
 
-function getGameImages() {
-    fetch(gameURL,
-        {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Client-ID': '',
-                'Authorization': ''
-            },
-            body: "fields *;"
-        })
-    .then(response => {
-        console.log(response)
-    }).catch(err => {
-        console.error(err)
-    })
-}
+// const gameURL = 'https://api.igdb.com/v4/games'
 
-getGameImages()
+// function getGames() {
+//     fetch(cors_api + gameURL,
+//         {
+//             method: 'POST',
+//             headers: {
+//                 'Accept': 'application/json',
+//                 'Client-ID': '',
+//                 'Authorization': ''
+//             },
+//             body: "fields age_ratings;"
+//         })
+//     .then(response => response.json())
+//     .then(data => console.log(data))
+// }
+
+// getGames()
+
+

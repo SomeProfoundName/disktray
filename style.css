@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Nabla&family=Pixelify+Sans:wght@400..700&family=Silkscreen:wght@400;700&display=swap');
 
+:root {
+    --bggradients: linear-gradient(0deg, rgba(23, 26, 33, 1) 0%, rgba(27, 40, 56, 1) 60%);
+    --blue: var(--blue)
+
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +15,7 @@
 
 body {
     background: rgb(23, 26, 33);
-    background: linear-gradient(0deg, rgba(23, 26, 33, 1) 0%, rgba(27, 40, 56, 1) 60%);
+    background: var(--bggradients);
     color: white;
 }
 
@@ -17,6 +23,10 @@ body {
 h4 {
     font-family: 'SilkScreen';
     font-size: 2rem;
+}
+
+.hr-bot {
+    margin-bottom: 10px;
 }
 
 /* UTILITIES  AND MEDIA QUERIES*/
@@ -37,7 +47,7 @@ h4 {
     margin-right: auto;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 /* 2xl */
@@ -94,6 +104,9 @@ nav {
 
 .logo, .title {
     display: inline;
+    aspect-ratio: 1 / 1;
+    width: 50px;
+    height: 50px;
 }
 
 .nav-left {
@@ -138,6 +151,27 @@ a:hover {
     color: white;
     text-shadow: 0px 0px 5px white;
 }
+
+/* NAV DROPDOWN */
+
+.nav-dropdown {
+    position: relative;
+    transition: all .5s ease;
+}
+
+.nav-dropdown-content {
+    margin-top: 5px;
+    position: absolute;
+    display: none;
+    z-index: 1;
+}
+
+.nav-dropdown:hover .nav-dropdown-content {
+    display: block;
+
+}
+
+
 
 
 /* FOOTER */
@@ -205,12 +239,31 @@ footer ul {
 
 /* --------------- MAIN PAGE --------------- */
 
+@keyframes dropIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+.dropIn {
+    animation: dropIn .5s ease both ;
+}
+
+.signinformcont {
+    padding: 0px;
+    overflow: hidden;
+    /* border: 1px solid purple; */
+}
 
 .signin {
-    border: 1px solid white;
-    background-color: rgba(255, 255, 255, 0.534);
+    position: relative;
     color: black;
     text-align: right;
+    padding: 10px 5px;
+    /* border: 1px solid white; */
 }
 
 .sign-form input {
@@ -269,7 +322,7 @@ footer ul {
 }
 
 .user-review {
-    border: 3px solid white;
+    /* border: 3px solid white; */
     display: flex;
     margin-bottom: 10px;
     gap: 10px
@@ -360,7 +413,7 @@ footer ul {
     margin: 5px;
 }
 
-.indie {
+.rpg {
     grid-area: 3 / 4 / 5 / 6;
     background-color: green;
     overflow: hidden;
@@ -378,7 +431,7 @@ footer ul {
     margin: 5px;
 }
 
-.action {
+.fighting {
     grid-area: 1 / 4 / 3 / 6;
     background-color: purple;
     overflow: hidden;
@@ -387,7 +440,7 @@ footer ul {
     margin: 5px;
 }
 
-.cosy {
+.sim {
     grid-area: 5 / 1 / 6 / 6;
     background-color: yellow;
     overflow: hidden;

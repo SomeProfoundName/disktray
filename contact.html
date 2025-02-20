@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DISKTRAY</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="index.js"></script>
+    <script defer type="module" src="signin.js"></script>
+    <script defer type="module" src="posts.js"></script>
+    <script defer type="module" src="games.js"></script>
     <script src="https://kit.fontawesome.com/379812885c.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=star" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=star" />
 </head>
 
 <body>
@@ -24,10 +27,34 @@
             <ul>
                 <li><a href="games.html">GAMES</a></li>
                 <li><a href="about.html">ABOUT</a></li>
-                <li><a id="account" class="underline" href="contact.html">SIGN IN</a></li>
+                <li>
+                    <div class="nav-dropdown"><a id="account" href="contact.html">SIGN IN</a>
+                        <div class="nav-dropdown-content">
+                            <a class="hidden" id="signOut">SignOut</a>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
     </nav>
+    <!-- SIGN IN FORM -->
+    <div id="signinformcont" class="signinformcont hidden container">
+        <section id="signinform" class="signin">
+            <div>
+                <form class="sign-form" id="signForm">
+                    <input class="hidden" type="text" id="username-input" placeholder="Enter Your Username">
+                    <input type="email" id="email-input" placeholder="Enter Email">
+                    <input type="password" name="" id="password-input" placeholder="Enter Password">
+                    <input class="hidden" type="password" name="" id="repeat-password-input"
+                        placeholder="Re-enter Password">
+                    <button id="loginBtn" type="submit">Login</button>
+                    <br>
+                    <a id="return-user" href="">Returning User</a>
+                </form>
+                <p id="login-responce"></p>
+            </div>
+        </section>
+    </div>
 
     <!-- MAIN -->
 
@@ -35,10 +62,9 @@
         <div class="account-landing">
             <img src="https://placehold.co/200x200" alt="">
             <div class="account-desc">
-                <p class="account-name">username</p>
+                <p id="account-name" class="account-name">username</p>
                 <div class="account-info">
                     <p>POSTS: ??</p>
-                    <p>AWARDS: ??</p>
                 </div>
             </div>
         </div>
@@ -69,7 +95,7 @@
     <section class="account-posts container">
         <div class="posts-container">
             <div class="previous-posts-container">
-                <div class="prev-post">
+                <div id="posts-area" class="prev-post">
                     <h4>GAME: Super Mario Galaxy</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem corporis voluptates cumque vitae
                         labore deleniti fugit velit nisi, unde dignissimos veniam eum sapiente sunt quo architecto
@@ -187,18 +213,25 @@
                         <ul>
                             <a href="">Games</a>
                             <a href="">About</a>
-                            <a href="">Sign In</a>
+                            <a id="nav-user" href="">Sign In</a>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
                 <hr>
-                <p>DISTRAY - JUST SOFTWARE DEVELOPMENT BOOTCAMP PROJECT</p>
+                <p>DISTRAY - JUST IT SOFTWARE DEVELOPMENT BOOTCAMP PROJECT</p>
                 <hr>
             </div>
         </footer>
     </section>
+
+    <script>
+        const accountName = document.getElementById('account-name')
+        if (localStorage.getItem('user')) {
+            accountName.innerText = localStorage.getItem('user')
+        }
+    </script>
 </body>
 
 </html>
