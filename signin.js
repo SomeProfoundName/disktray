@@ -71,6 +71,7 @@ loginForm.addEventListener('submit', (e) => {
                     showSignInCont.style.display = 'none'
                     localStorage.setItem('user', body.user)
                     localStorage.setItem('loggedIn', 'True')
+                    localStorage.setItem('profileImg', body.profileImg)
                     signInCheck()
                 }
                 if (body.login == 'unsuccessful') {

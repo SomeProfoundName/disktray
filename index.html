@@ -9,6 +9,7 @@
     <script src="https://kit.fontawesome.com/379812885c.js" crossorigin="anonymous"></script>
 
     <script defer src="signin.js"></script>
+    <script defer src="index.js"></script>
 
 
 </head>
@@ -17,7 +18,7 @@
     <nav class="container">
         <div class="nav-left">
             <a href="index.html">
-                <img class="logo" src="./images/logo.png" alt="">
+                <img class="logo" src="/images/Disktray.png" alt="">
                 <h1 class="title">DISKTRAY</h1>
             </a>
         </div>
@@ -43,8 +44,7 @@
                     <input class="hidden" type="text" id="username-input" placeholder="Enter Your Username">
                     <input type="email" id="email-input" placeholder="Enter Email">
                     <input type="password" name="" id="password-input" placeholder="Enter Password">
-                    <input class="hidden" type="password" id="repeat-password-input"
-                        placeholder="Re-enter Password">
+                    <input class="hidden" type="password" id="repeat-password-input" placeholder="Re-enter Password">
                     <button id="loginBtn" type="submit">Login</button>
                     <br>
                     <a id="return-user" href="">Returning User</a>
@@ -57,7 +57,7 @@
     <!-- <button onclick="getGames()">GET GAMES</button> -->
 
     <section class="hero container">
-        <img class="hero-cover" src="./images/bg3 cover.jpg" alt="game image">
+        <img class="hero-cover container" src="./images/bg3 cover.png" alt="game image">
         <div class="hero-text">
             <p>The all-in-one place for game reviews and record keeping.</p>
             <p>"like letterboxd but for games"
@@ -65,15 +65,15 @@
             </p>
             <br>
             <p>Write a Review</p>
-            <button>Get Started</button>
-            <button id="test_btn">TESTING BUTTON</button>
+            <button id="get-started">Get Started</button>
+            <button class="hidden" id="test_btn">TESTING BUTTON</button>
         </div>
     </section>
 
 
     <section class="top-games container">
-        <div class="top-games-selection">
-            <img src="https://placehold.co/150x200" alt="game1">
+        <div id="imageArea" class="top-games-selection">
+            <img class="top-games-image" src="https://placehold.co/150x200" alt="game1">
             <img src="https://placehold.co/150x200" alt="game2">
             <img src="https://placehold.co/150x200" alt="game3">
             <img src="https://placehold.co/150x200" alt="game4">
@@ -89,72 +89,27 @@
         <div class="top-reviews">
             <div class="reviews">
                 <h2>TOP REVIEWS THIS MONTH</h2>
-                <hr>
+                <hr class="hr-bot">
 
                 <!-- user comments -->
-                <div class="user-review">
-                    <img src="https://placehold.co/100x150" alt="">
-                    <div class="user">
-                        <div class="title">
-                            <p>Title <span class="date">Date</span></p>
-                        </div>
-                        <div class="user-info">
-                            <img src="https://placehold.co/30x30" alt="">
-                            <p class="user">Username</p>
-                            <p class="stars">****</p>
-                            <p class="recommend">o</p>
-                        </div>
-                        <div class="user-text">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, ab.</p>
-                        </div>
-                        <div class="likes">
-                            <p>1000</p>
+                <div id="user-review-area">
+                    <div class="user-review">
+                        <img class="user-review-img" src="https://placehold.co/100x150" alt="">
+                        <div class="user">
+                            <div class="user-review-title">
+                                <p>Title</p>
+                            </div>
+                            <div class="user-info">
+                                <img class="user-info-img" src="https://placehold.co/30x30" alt="">
+                                <p class="user">Username</p>
+                                <p class="likes">👍: </p>
+                            </div>
+                            <div class="user-text">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, ab.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="user-review">
-                    <img src="https://placehold.co/100x150" alt="">
-                    <div class="user">
-                        <div class="title">
-                            <p>Title <span class="date">Date</span></p>
-                        </div>
-                        <div class="user-info">
-                            <img src="https://placehold.co/30x30" alt="">
-                            <p class="user">Username</p>
-                            <p class="stars">****</p>
-                            <p class="recommend">o</p>
-                        </div>
-                        <div class="user-text">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, ab.</p>
-                        </div>
-                        <div class="likes">
-                            <p>1000</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="user-review">
-                    <img src="https://placehold.co/100x150" alt="">
-                    <div class="user">
-                        <div class="title">
-                            <p>Title <span class="date">Date</span></p>
-                        </div>
-                        <div class="user-info">
-                            <img src="https://placehold.co/30x30" alt="">
-                            <p class="user">Username</p>
-                            <p class="stars">****</p>
-                            <p class="recommend">o</p>
-                        </div>
-                        <div class="user-text">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, ab.</p>
-                        </div>
-                        <div class="likes">
-                            <p>1000</p>
-                        </div>
-                    </div>
-                </div>
-
 
             </div>
         </div>
@@ -166,36 +121,18 @@
             <hr class="hr-bot">
 
             <!-- users -->
-            <div class="top-user">
-                <div class="tu-left">
-                    <img src="https://placehold.co/50x50" alt="">
+            <div id="top-users">
+                <div class="top-user">
+                    <div class="tu-left">
+                        <img class="tu-img" src="https://placehold.co/50x50" alt="">
+                    </div>
+                    <div class="tu-right">
+                        <p>USER</p>
+                        <p>@user</p>
+                    </div>
                 </div>
-                <div class="tu-right">
-                    <p>USER</p>
-                    <p>@user</p>
-                </div>
-            </div>
 
-            <div class="top-user">
-                <div class="tu-left">
-                    <img src="https://placehold.co/50x50" alt="">
-                </div>
-                <div class="tu-right">
-                    <p>USER</p>
-                    <p>@user</p>
-                </div>
             </div>
-
-            <div class="top-user">
-                <div class="tu-left">
-                    <img src="https://placehold.co/50x50" alt="">
-                </div>
-                <div class="tu-right">
-                    <p>USER</p>
-                    <p>@user</p>
-                </div>
-            </div>
-
 
         </div>
         </div>
@@ -208,7 +145,7 @@
                 <div class="footer-left">
                     <div class="foooter-logo">
                         <a href="index.html">
-                            <img class="logo" src="./images/logo.png" alt="">
+                            <img class="logo" src="/images/Disktray.png" alt="">
                             <h1 class="title">DISKTRAY</h1>
                         </a>
                     </div>

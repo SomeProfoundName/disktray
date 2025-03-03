@@ -3,7 +3,6 @@
 :root {
     --bggradients: linear-gradient(0deg, rgba(23, 26, 33, 1) 0%, rgba(27, 40, 56, 1) 60%);
     --blue: var(--blue)
-
 }
 
 * {
@@ -14,11 +13,9 @@
 }
 
 body {
-    background: rgb(23, 26, 33);
     background: var(--bggradients);
     color: white;
 }
-
 
 h4 {
     font-family: 'SilkScreen';
@@ -102,7 +99,8 @@ nav {
     margin: 10px 50px;
 }
 
-.logo, .title {
+.logo,
+.title {
     display: inline;
     aspect-ratio: 1 / 1;
     width: 50px;
@@ -233,6 +231,7 @@ footer ul {
     padding: 15px 0px;
     font-weight: bold;
 }
+
 .footer-bottom hr {
     opacity: .5;
 }
@@ -243,13 +242,14 @@ footer ul {
     from {
         transform: translateY(-100%);
     }
+
     to {
         transform: translateY(0%);
     }
 }
 
 .dropIn {
-    animation: dropIn .5s ease both ;
+    animation: dropIn .5s ease both;
 }
 
 .signinformcont {
@@ -270,7 +270,7 @@ footer ul {
     padding: 5px 5px;
     color: white;
     background-color: rgba(23, 26, 33, 0.377);
-    
+
 }
 
 .sign-form button {
@@ -293,6 +293,12 @@ footer ul {
     text-align: center;
 }
 
+.hero-cover {
+    position: absolute;
+    z-index: -1;
+    opacity: .5;
+    transform: translateY(100px);
+}
 
 /* TOP GAMES */
 
@@ -305,6 +311,12 @@ footer ul {
     display: flex;
     gap: 20px;
     justify-content: center;
+}
+
+.top-games-image {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
 }
 
 
@@ -328,10 +340,20 @@ footer ul {
     gap: 10px
 }
 
+.user-review-img{
+    width: 200px;
+    height: 150px;
+    object-fit: contain;
+}
+
 .user {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.user-review-title {
+    font-size: 2rem;
 }
 
 .date {
@@ -351,6 +373,11 @@ footer ul {
     border-radius: 10%;
 }
 
+.user-info-img {
+    width: 30px;
+    height: 30px;
+}
+
 /* LEFT SIDE USER AREA */
 
 .top-users-area {
@@ -364,6 +391,10 @@ footer ul {
 
 .tu-left img {
     border-radius: 10%;
+}
+
+.tu-img {
+    width: 40px;
 }
 
 
@@ -383,20 +414,20 @@ footer ul {
     display: grid;
     width: auto;
     aspect-ratio: 1/1;
-    grid-template-columns:  20% 20% 20% 20% 20%;
-    grid-template-rows:  1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 
 }
 
 .item img {
     width: 100%;
-    
+
 }
 
 .item img:hover {
     width: 100%;
     transform: scale(110%);
-    
+
 }
 
 /* .fps, .indie, .platformer, .cosy, .action {
@@ -460,6 +491,12 @@ footer ul {
     gap: 30px;
 }
 
+.trendy-games-img {
+    width: 200px;
+    height: 100px;
+    box-shadow: 4px 3px 12px -1px white;
+}
+
 
 /* --------------- ACCOUNTS PAGE --------------- */
 
@@ -478,6 +515,18 @@ footer ul {
     margin-top: 30px;
 }
 
+.about-img{
+    display: flex;
+    flex-direction: column;
+}
+
+.about-me-img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    opacity: .7;
+}
+
 .about-info p {
     font-size: 1.3rem;
     margin-bottom: 1.2rem;
@@ -487,7 +536,7 @@ footer ul {
     margin-top: 5rem;
     display: flex;
     justify-content: space-evenly;
-    font-size: 5rem;
+    font-size: 2rem;
 }
 
 
@@ -502,6 +551,34 @@ footer ul {
 .account-landing {
     display: flex;
 }
+
+.profile-pic {
+    position: relative;
+    display: inline;
+}
+
+.profile-pic::after{
+    content: "CHANGE PICTURE";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.profile-pic:hover::after {
+    opacity: 1;
+}
+
 
 .account-desc {
     display: flex;
@@ -537,7 +614,7 @@ footer ul {
 }
 
 
-.account-posts{
+.account-posts {
     margin-top: 20px;
 }
 
@@ -551,6 +628,19 @@ footer ul {
     width: 80%;
 }
 
+
+.post{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.post-left-img{
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
 .game-rating {
     display: flex;
     align-items: center;
@@ -562,5 +652,3 @@ footer ul {
     color: yellow;
     text-shadow: 0px 0px 5px rgba(255, 166, 0, 0.863);
 }
-
-

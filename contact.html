@@ -15,11 +15,12 @@
 </head>
 
 <body>
+    <div class="background"></div>
     <!-- NAV -->
     <nav class="container">
         <div class="nav-left">
             <a href="index.html">
-                <img class="logo" src="https://placehold.co/50x50" alt="">
+                <img class="logo" src="/images/Disktray.png" alt="">
                 <h1 class="title">DISKTRAY</h1>
             </a>
         </div>
@@ -60,11 +61,12 @@
 
     <section class="account container">
         <div class="account-landing">
-            <img src="https://placehold.co/200x200" alt="">
+            <div class="profile-pic" id="profile-pic">
+                <img id="profile-pic-img" class="profile-pic-img" src="https://placehold.co/200x200" alt="">
+            </div>
             <div class="account-desc">
                 <p id="account-name" class="account-name">username</p>
                 <div class="account-info">
-                    <p>POSTS: ??</p>
                 </div>
             </div>
         </div>
@@ -74,15 +76,13 @@
 
     <section class="post-area container">
         <div class="posts">
-            <form action="">
+            <form id="postReview">
                 <p>WRITE POST:</p>
-                <select name="games-drop" id="games-drop">
-                    <option value="">Terraria</option>
-                    <option value="">Minecraft</option>
-                    <option value="">CS2</option>
-                </select>
-                <textarea name="" id=""></textarea>
-                <button id="post-game">POST REVIEW</button>
+                <input id="userGameInput" type="text" placeholder="INSERT GAME HERE"> <br>
+                <label for="screenshot">ADD A SCREENSHOT HERE:</label>
+                <input type="file" name="screenshot" id="screenshot" accept="image/png, image/jpeg">
+                <textarea id="userReviewInput"></textarea>
+                <button id="post-game" type="submit">POST REVIEW</button>
             </form>
         </div>
     </section>
@@ -96,14 +96,24 @@
         <div class="posts-container">
             <div class="previous-posts-container">
                 <div id="posts-area" class="prev-post">
-                    <h4>GAME: Super Mario Galaxy</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem corporis voluptates cumque vitae
-                        labore deleniti fugit velit nisi, unde dignissimos veniam eum sapiente sunt quo architecto
-                        pariatur, repellat reiciendis id fuga ipsum distinctio harum quam nam? Blanditiis deserunt eos
-                        quisquam?</p>
+                    <div class="post">
+                        <div class="post-left">
+                            <img class="post-left-img" src="https://placehold.co/200x200" alt="">
+                        </div>
+                        <div class="post-right">
+                            <h4>GAME: Super Mario Galaxy</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem corporis voluptates
+                                cumque vitae
+                                labore deleniti fugit velit nisi, unde dignissimos veniam eum sapiente sunt quo
+                                architecto
+                                pariatur, repellat reiciendis id fuga ipsum distinctio harum quam nam? Blanditiis
+                                deserunt eos
+                                quisquam?</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="ratings-container">
+            <!-- <div class="ratings-container">
                 <h4>RATINGS</h4>
                 <div class="game-rating">
                     <img src="https://placehold.co/75x75" alt="">
@@ -185,7 +195,7 @@
                         </span>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 
@@ -196,7 +206,7 @@
                 <div class="footer-left">
                     <div class="foooter-logo">
                         <a href="index.html">
-                            <img class="logo" src="https://placehold.co/50x50" alt="">
+                            <img class="logo" src="/images/Disktray.png" alt="">
                             <h1 class="title">DISKTRAY</h1>
                         </a>
                     </div>
